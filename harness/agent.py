@@ -120,7 +120,7 @@ from harness.middleware import Middleware, MiddlewareStack
 #: every tool call returning noise the mock needs 31 turns to reach its
 #: FINAL, and a run that hits the cap produces no report and scores zero
 #: with no error message anywhere.
-MAX_STEPS = 40
+MAX_STEPS = 70
 
 #: `k` a search is allowed to ask for. The mock asks for 5; the clamp is
 #: here so a bug (or a creative prompt) cannot pull the whole corpus into

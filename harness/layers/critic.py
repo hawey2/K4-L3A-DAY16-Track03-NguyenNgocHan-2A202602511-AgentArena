@@ -99,16 +99,22 @@ class Critic(Middleware):
                 continue
 
             if " và " in text:
-                parts = [p.strip() for p in text.split(" và ")]
+                parts = text.split(" và ", 1)
                 if len(parts) == 2:
-                    part1, part2 = parts
+                    part1, part2 = parts[0].strip(), parts[1].strip()
+                    # MockModel fusion adds " và " between spans, but spans may
+                    # start/end with " và " causing double " và ". Strip it.
+                    if part2.startswith("và "):
+                        part2 = part2[3:].strip()
+                    if part1.endswith(" và"):
+                        part1 = part1[:-2].strip()
                     if part1 in observed and part2 in observed:
                         doc1 = None
                         doc2 = None
                         for d in ctx.corpus.docs:
-                            if part1 in d.body and d.body in observed:
+                            if part1 in d.body:
                                 doc1 = d.doc_id
-                            if part2 in d.body and d.body in observed:
+                            if part2 in d.body:
                                 doc2 = d.doc_id
                         if doc1 and doc2 and doc1 != doc2:
                             kept.append({"text": part1, "doc_id": doc1})

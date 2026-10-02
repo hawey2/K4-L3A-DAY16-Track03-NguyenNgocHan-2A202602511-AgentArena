@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# Test + tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Practice output. `scripts/run_practice.py` writes here every run; nothing
+# in it is submitted and nothing in it should ever be committed.
+runs/
+
+# Instructor-only phase material. NEVER present in this bundle, and never
+# committed if it ever lands here: it is how the scored round stays scored.
+phases/private/
+
+# macOS
+.DS_Store

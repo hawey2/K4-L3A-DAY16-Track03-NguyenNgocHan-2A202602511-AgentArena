@@ -1,0 +1,10 @@
+{
+  "body": "Công ty CP Hậu cần Sao Kim — Phòng Bảo trì thiết bị\n\nHệ thống cảm biến nhiệt độ tại các kho lạnh được biết là mất kết nối không thường xuyên do hạ tầng mạng nội bộ chưa ổn định. Khi truy vấn dữ liệu thời gian thực từ hệ thống này, các công cụ giám sát có thể trả về kết quả bị trễ, bị cắt bớt hoặc báo lỗi hết thời gian chờ. Quy trình chuẩn là thử lại truy vấn trước khi báo cáo sự cố.\n",
+  "doc_id": "doc-0008",
+  "tags": [
+    "flaky",
+    "equipment_maintenance",
+    "operations"
+  ],
+  "title": "Hệ thống cảm biến nhiệt độ kho lạnh — Ghi chú vận hành"
+}

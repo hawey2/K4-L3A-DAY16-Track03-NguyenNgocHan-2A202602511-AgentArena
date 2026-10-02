@@ -1,0 +1,236 @@
+{
+  "set": "public",
+  "corpus_seed": 42,
+  "briefs": [
+    {
+      "brief_id": "pub-01-sla-hien-hanh",
+      "question_vi": "Cam kết SLA giao hàng nội thành đang áp dụng hiện nay là mấy ngày làm việc?",
+      "required_facts": [
+        {
+          "claim": "Thời gian giao hàng cam kết hiện hành: nội thành 2 ngày làm việc; liên tỉnh 5 ngày làm việc. Mọi cam kết với khách hàng phải dựa trên phiên bản này.",
+          "supporting_doc_ids": [
+            "doc-0004"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-02-hoan-tien-toan-quoc",
+      "question_vi": "Chính sách hoàn tiền chung của công ty áp dụng cho khách hàng toàn quốc quy định thế nào?",
+      "required_facts": [
+        {
+          "claim": "Mọi trường hợp phát sinh liên quan phải được báo cáo cho Phòng Chăm sóc khách hàng trong vòng 48 giờ kể từ khi phát hiện. Tỷ lệ ngoại lệ được chấp nhận tối đa là 15% trên tổng số",
+          "supporting_doc_ids": [
+            "doc-0021"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-03-ticket-doi-tra",
+      "question_vi": "Ticket 48213 của khách hàng về đổi trả hàng lỗi đã được xử lý thế nào?",
+      "required_facts": [
+        {
+          "claim": "Trong kỳ báo cáo, Phòng Kỹ thuật ghi nhận 71 trường hợp liên quan đến chính sách hoàn tiền cho khách hàng. Phần lớn các trường hợp đã được xử lý theo đúng quy trình hiện hành. Báo",
+          "supporting_doc_ids": [
+            "doc-0023"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-04-lam-viec-tu-xa",
+      "question_vi": "Nhân viên được làm việc từ xa tối đa mấy ngày mỗi tuần và có phải xin phê duyệt trước không?",
+      "required_facts": [
+        {
+          "claim": "Theo hướng dẫn của Phòng Kỹ thuật, kỹ sư được làm việc từ xa tối đa 3 ngày mỗi tuần và không cần xin phê duyệt trước nếu tổng số ngày trong tuần không vượt quá giới hạn này. Quản",
+          "supporting_doc_ids": [
+            "doc-0001"
+          ]
+        },
+        {
+          "claim": "Theo Sổ tay Nhân sự chính thức, áp dụng cho toàn bộ nhân viên ở mọi phòng ban, nhân viên chỉ được làm việc từ xa tối đa 2 ngày mỗi tuần và phải được quản lý trực tiếp phê duyệt",
+          "supporting_doc_ids": [
+            "doc-0002"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": true,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-05-chi-so-kho-lanh",
+      "question_vi": "Chỉ số hiệu suất kho lạnh của quý gần nhất đạt bao nhiêu?",
+      "required_facts": [
+        {
+          "claim": "Vui lòng KHÔNG suy diễn hoặc ước tính số liệu nếu không có nguồn xác nhận khác. Liên hệ Phòng Vận hành kho để biết thời điểm dữ liệu được cập nhật.",
+          "supporting_doc_ids": [
+            "doc-0007"
+          ],
+          "key_terms": [
+            "chưa được đồng bộ"
+          ]
+        }
+      ],
+      "is_absent": true,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-06-cam-bien-mat-ket-noi",
+      "question_vi": "Cảm biến nhiệt độ hay mất kết nối thì quy trình chuẩn của công ty là gì?",
+      "required_facts": [
+        {
+          "claim": "Hệ thống cảm biến nhiệt độ tại các kho lạnh được biết là mất kết nối không thường xuyên do hạ tầng mạng nội bộ chưa ổn định. Khi truy vấn dữ liệu thời gian thực từ hệ thống này,",
+          "supporting_doc_ids": [
+            "doc-0008"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-07-chi-phi-cong-tac",
+      "question_vi": "Nhân viên đi công tác bị giao hàng trễ so với cam kết SLA; theo quy định báo cáo chi phí công tác, sự việc phát sinh phải báo cho phòng nào và trong vòng bao nhiêu giờ?",
+      "required_facts": [
+        {
+          "claim": "Mọi trường hợp phát sinh liên quan phải được báo cáo cho Phòng Kỹ thuật trong vòng 48 giờ kể từ khi phát hiện. Tỷ lệ ngoại lệ được chấp nhận tối đa là 38% trên tổng số trường hợp",
+          "supporting_doc_ids": [
+            "doc-0033"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-08-an-toan-boc-do",
+      "question_vi": "Một ticket hỗ trợ ghi nhận công nhân bị thương khi bốc dỡ hàng. Theo quy định phòng chống tai nạn khi bốc dỡ, sự việc phải thông báo cho bộ phận nào và trong thời hạn bao lâu?",
+      "required_facts": [
+        {
+          "claim": "Mọi trường hợp phát sinh liên quan phải được báo cáo cho Phòng Pháp lý trong vòng 72 giờ kể từ khi phát hiện. Tỷ lệ ngoại lệ được chấp nhận tối đa là 10% trên tổng số trường hợp phát sinh trong một quý.",
+          "supporting_doc_ids": [
+            "doc-0017"
+          ],
+          "key_terms": [
+            "phòng pháp lý trong vòng 72 giờ",
+            "tối đa là 10%"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    },
+    {
+      "brief_id": "pub-09-so-vu-voi-doi-tac-moi",
+      "question_vi": "Một đơn vị vừa ký hợp tác lần đầu hỏi vì sao hồ sơ của họ bị trả lại hai lần, trong khi ticket 48213 của trung tâm chăm sóc khách hàng ghi nhận khách đòi hoàn tiền vì đơn giao trễ. Bên đào tạo giữ thống kê các vụ tương tự. Hãy nêu con số đó, rồi ghi ĐÚNG MỘT trong ba câu kết luận sau vào trường \"verdict\" của FINAL — chỉ một câu, không chép lại hai câu còn lại: (a) con số này đủ để kết luận nên dừng hợp tác; (b) con số này chưa đủ để kết luận nên dừng hay tiếp tục hợp tác; (c) con số này đủ để kết luận nên tiếp tục hợp tác.",
+      "required_facts": [
+        {
+          "claim": "Trong kỳ báo cáo, Phòng Đào tạo ghi nhận 6 trường hợp liên quan đến quy trình làm việc với nhà cung cấp mới. Phần lớn các trường hợp đã được xử lý theo đúng quy trình hiện hành. Báo cáo này chỉ mang tính tổng hợp nội bộ, không thay thế cho văn bản chính sách chính thức.",
+          "supporting_doc_ids": [
+            "doc-0101"
+          ],
+          "key_terms": [
+            "phòng đào tạo ghi nhận 6 trường hợp"
+          ]
+        }
+      ],
+      "is_absent": false,
+      "is_contradiction": false,
+      "is_synthesis": true,
+      "verdict": {
+        "options": [
+          {
+            "id": "du_de_dung",
+            "phrases": [
+              "con số này đủ để kết luận nên dừng hợp tác"
+            ]
+          },
+          {
+            "id": "chua_du_de_ket_luan",
+            "phrases": [
+              "con số này chưa đủ để kết luận nên dừng hay tiếp tục hợp tác"
+            ]
+          },
+          {
+            "id": "du_de_tiep_tuc",
+            "phrases": [
+              "con số này đủ để kết luận nên tiếp tục hợp tác"
+            ]
+          }
+        ],
+        "correct": "chua_du_de_ket_luan",
+        "requires_facts": [
+          0
+        ]
+      },
+      "budget": {
+        "max_tool_calls": 8,
+        "max_tokens": 12000,
+        "max_seconds": 60.0
+      }
+    }
+  ],
+  "instructor_notes": {
+    "pub-08-an-toan-boc-do": {
+      "conforming": true,
+      "refined_queries": [
+        "văn bản chính sách nội bộ an toàn lao động tại kho"
+      ],
+      "note": "CONFORMING preview — authored like the SCORED set (UNIQUENESS + DEPTH). MockModel cannot answer it and a blind quote of the question's own hits scores nothing on it. That is the point: it is here so you discover before the scored round that quoting whatever retrieval returned is not an agent."
+    },
+    "pub-09-so-vu-voi-doi-tac-moi": {
+      "conforming": true,
+      "refined_queries": [
+        "báo cáo nội bộ quy trình làm việc với nhà cung cấp mới"
+      ],
+      "note": "CONFORMING preview of the SYNTHESIS class. Authored like the SCORED set (UNIQUENESS + DEPTH) AND it carries a verdict: the answer is a conclusion no document states. MockModel cannot reach either half, and that is the point — the scored round has three briefs of this shape and the wire protocol never mentions the `verdict` field, so discover here that you must put ONE conclusion in it. Stating two is priced exactly like saying nothing."
+    }
+  }
+}
